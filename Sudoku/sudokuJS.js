@@ -11,12 +11,6 @@ for (var i = 0; i < 4; i++)
         matrix[i * 4 + j] = (i * 2 + Math.floor(i / 2) + j) % 4 + 1;
 
 
-
-
-
-
-
-
 var table = document.createElement("table");
 table.border = 1;
 var trs = new Array(4);
