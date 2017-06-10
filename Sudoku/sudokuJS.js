@@ -1,3 +1,6 @@
+
+
+
 var articleDiv = document.querySelector("div.base");
 
 
@@ -73,11 +76,20 @@ table.border = 1;
 var trs = new Array(4);
 var tds = new Array(16);
 
-for (var i = 0; i < 16; i++)
+
+var inputs = new Array(8);
+
+for (var i = 0, j = 0; i < 16; i++)
 {
     tds[i] = document.createElement("td");
     if (matrix[i] != 0) tds[i].textContent = matrix[i];
-    else tds[i].textContent = "";
+    else
+    {
+        inputs[j] = document.createElement("input");
+        inputs[j].type = "text";
+        tds[i].appendChild(inputs[j]);
+        j++;
+    }
 }
 
 for (var i = 0; i < 4; i++)
