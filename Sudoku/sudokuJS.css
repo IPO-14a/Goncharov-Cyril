@@ -10,3 +10,11 @@ table
     margin-left: 38%;
     margin-top : 12%;
 }
+input
+{
+    width: 100px;
+    height: 100px;
+    text-align:center;
+    font-size: 50px;
+    color: blue;
+}
