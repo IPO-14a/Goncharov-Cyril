@@ -1,3 +1,33 @@
+var CheckValues = function()
+{
+
+}
+var InputNumber = function()
+{
+    //var input = document.getElementById(id);
+    alert("asd");
+}
+
+var input = document.getElementById("testinput");
+
+
+
+
+input.oninput = function () {
+    var text = "";
+    text = input.value
+    if (text[text.length - 1] != 1 && text[text.length - 1] != 2 && text[text.length - 1] != 3 && text[text.length - 1] != 4)
+        input.value = text.substring(0, text.length - 1s);
+}
+
+
+
+
+
+
+
+
+
 var articleDiv = document.querySelector("div.base");
 
 
