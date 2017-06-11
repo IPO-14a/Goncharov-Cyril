@@ -1,6 +1,5 @@
 
 
-<<<<<<< HEAD
 /*var input = document.getElementById("testinput");
 
 var line, column;
@@ -22,8 +21,6 @@ input.onchange = function () {
 }*/
 
 
-=======
->>>>>>> origin/master
 
 
 var articleDiv = document.querySelector("div.base");
@@ -100,13 +97,11 @@ var trs = new Array(4);
 var tds = new Array(16);
 
 
-<<<<<<< HEAD
 
 var inputs = new Array(8);
 var inpinds = new Array(8);
 
-for (var i = 0; i < 8; i++)
-{
+for (var i = 0; i < 8; i++) {
     inputs[i] = document.createElement("input");
     inputs[i].type = "text";
 }
@@ -242,24 +237,11 @@ inputs[7].onchange = function () {
 
 
 
-for (var i = 0, j=0; i < 16; i++)
-{
+for (var i = 0, j = 0; i < 16; i++) {
     tds[i] = document.createElement("td");
     if (matrix[i] != 0) tds[i].textContent = matrix[i];
     else {
         inpinds[j] = i;
-=======
-var inputs = new Array(8);
-
-for (var i = 0, j = 0; i < 16; i++)
-{
-    tds[i] = document.createElement("td");
-    if (matrix[i] != 0) tds[i].textContent = matrix[i];
-    else
-    {
-        inputs[j] = document.createElement("input");
-        inputs[j].type = "text";
->>>>>>> origin/master
         tds[i].appendChild(inputs[j]);
         j++;
     }
@@ -270,8 +252,7 @@ for (var i = 0, j = 0; i < 16; i++)
 
 
 
-for (var i = 0; i < 4; i++)
-{
+for (var i = 0; i < 4; i++) {
     trs[i] = document.createElement("tr");
     trs[i].appendChild(tds[i * 4 + 0])
     trs[i].appendChild(tds[i * 4 + 1])
@@ -283,11 +264,3 @@ for (var i = 0; i < 4; i++)
 }
 
 articleDiv.appendChild(table);
-
-
-
-
-
-
-
-

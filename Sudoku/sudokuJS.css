@@ -10,7 +10,6 @@ table
     margin-left: 38%;
     margin-top : 12%;
 }
-<<<<<<< HEAD
 input.right
 {
     width: 100px;
@@ -20,8 +19,6 @@ input.right
     color: blue;
     background-color: white;
 }
-=======
->>>>>>> origin/master
 input
 {
     width: 100px;
@@ -29,7 +26,6 @@ input
     text-align:center;
     font-size: 50px;
     color: blue;
-<<<<<<< HEAD
     background-color: white;
 }
 input.wrong
@@ -40,6 +36,4 @@ input.wrong
     font-size: 50px;
     color: white;
     background-color: lightcoral;
-=======
->>>>>>> origin/master
 }
