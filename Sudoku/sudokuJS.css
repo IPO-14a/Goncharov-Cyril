@@ -10,3 +10,30 @@ table
     margin-left: 38%;
     margin-top : 12%;
 }
+input.right
+{
+    width: 100px;
+    height: 100px;
+    text-align:center;
+    font-size: 50px;
+    color: blue;
+    background-color: white;
+}
+input
+{
+    width: 100px;
+    height: 100px;
+    text-align:center;
+    font-size: 50px;
+    color: blue;
+    background-color: white;
+}
+input.wrong
+{
+    width: 100px;
+    height: 100px;
+    text-align:center;
+    font-size: 50px;
+    color: white;
+    background-color: lightcoral;
+}
