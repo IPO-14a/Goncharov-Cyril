@@ -10,14 +10,23 @@ var InputNumber = function()
 
 var input = document.getElementById("testinput");
 
-
-
+var line, column;
 
 input.oninput = function () {
+    //var input = document.getElementById(id);
     var text = "";
     text = input.value
     if (text[text.length - 1] != 1 && text[text.length - 1] != 2 && text[text.length - 1] != 3 && text[text.length - 1] != 4)
-        input.value = text.substring(0, text.length - 1s);
+        input.value = text.substring(0, text.length - 1);
+}
+input.onchange = function()
+{
+    line = 0;
+    column = 0;
+    for(var i=0; i<4; i++)
+    {
+        if (input.value == matrix[line * 4 + i]) input.value="0"
+    }
 }
 
 
