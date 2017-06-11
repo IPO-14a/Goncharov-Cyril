@@ -1,6 +1,7 @@
 
 
 
+
 var articleDiv = document.querySelector("div.base");
 
 
@@ -105,3 +106,11 @@ for (var i = 0; i < 4; i++)
 }
 
 articleDiv.appendChild(table);
+
+
+
+
+
+
+
+
