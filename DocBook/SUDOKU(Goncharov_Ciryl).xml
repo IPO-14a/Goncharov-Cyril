@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- This document was created with Syntext Serna Free. --><!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "docbookV4.5/docbookx.dtd" []>
+<article>
+  <title>SUDOKU(Goncharov_Cyril)</title>
+  <articleinfo>
+    <abstract>
+      <title>Разрабатываемое ПО позволяет играть в цифровую головоломку-пазл Судоку. </title>
+      <para>JavaScript, HTML, CSS</para>
+    </abstract>
+  </articleinfo>
+  <abstract>
+    <para>Функционал программы позволяет создавать поле Судоку размером 4*4 ячейки. Поле заполняется случайным образом, оставляя половину ячеек не заполнеными. После заполнения ячейки происходит её проверка на корректность.</para>
+    <para>Экплуатационное назначение - игрового процесса в математическую головоломку Судоку.</para>
+    <para>Потребность в разработке нового решения при существовании готовых продуктов, которые частично реализуют требования, описанные в ТЗ, обусловлено тем, что игра-головоломка Судоку служит отличным заданием для развития навыков программирования.</para>
+  </abstract>
+  <abstract>
+    <title>Пример №1 - Перегрузка события ввода для пустой чейки поля</title>
+    <para>Служит для контроля ввода
+цифр.Применяется для каждой ячейки отдельно.</para>
+    <para>inputs[0].oninput = function () {
+      </para>
+    <para>var text = &quot;&quot;;</para>
+    <para>text = inputs[0].value;
+          </para>
+    <para>if (text[text.length - 1] != 1 &amp;&amp; text[text.length - 1] != 2 &amp;&amp; text[text.length - 1] != 3 &amp;&amp; text[text.length - 1] != 4)
+          </para>
+    <para>inputs[0].value = text.substring(0, text.length - 1);</para>
+    <para>}
+      </para>
+  </abstract>
+  <abstract>
+    <title>Пример № 2 - Перегрузка события изменения поля для ячейки</title>
+    <para>Служит для проверки
+ячейки на совпадения в строке/столбце. Применяется для каждой ячейки отдельно.</para>
+    <para>inputs[0].onchange = function () {</para>
+    <para>var line = Math.floor(inpinds[0] / 4);
+  </para>
+    <para>var column = inpinds[0] % 4;
+</para>
+    <para>inputs[0].className = &quot;right&quot;;</para>
+    <para>for (var i = 0; i &lt; 4; i++) {</para>
+    <para>if (inputs[0].value == matrix[line * 4 + i]) inputs[0].className = &quot;wrong&quot;;</para>
+    <para>if (inputs[0].value == matrix[i * 4 + column]) inputs[0].className = &quot;wrong&quot;;</para>
+    <para>}</para>
+    <para>matrix[inpinds[0]] = inputs[0].value</para>
+    <para>}</para>
+  </abstract>
+</article>
