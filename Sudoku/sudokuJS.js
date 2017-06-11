@@ -25,7 +25,8 @@ input.onchange = function()
     column = 0;
     for(var i=0; i<4; i++)
     {
-        if (input.value == matrix[line * 4 + i]) input.value="0"
+        if (input.value == matrix[line * 4 + i]) input.value = "0"
+        if (input.value == matrix[i * 4 + column]) input.value = "0"
     }
 }
 
