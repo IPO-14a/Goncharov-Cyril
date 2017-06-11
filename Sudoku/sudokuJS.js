@@ -1,39 +1,3 @@
-var CheckValues = function()
-{
-
-}
-var InputNumber = function()
-{
-    //var input = document.getElementById(id);
-    alert("asd");
-}
-
-var input = document.getElementById("testinput");
-
-var line, column;
-
-input.oninput = function () {
-    //var input = document.getElementById(id);
-    var text = "";
-    text = input.value
-    if (text[text.length - 1] != 1 && text[text.length - 1] != 2 && text[text.length - 1] != 3 && text[text.length - 1] != 4)
-        input.value = text.substring(0, text.length - 1);
-}
-input.onchange = function()
-{
-    line = 0;
-    column = 0;
-    for(var i=0; i<4; i++)
-    {
-        if (input.value == matrix[line * 4 + i]) input.value = "0"
-        if (input.value == matrix[i * 4 + column]) input.value = "0"
-    }
-}
-
-
-
-
-
 
 
 
@@ -113,11 +77,20 @@ table.border = 1;
 var trs = new Array(4);
 var tds = new Array(16);
 
-for (var i = 0; i < 16; i++)
+
+var inputs = new Array(8);
+
+for (var i = 0, j = 0; i < 16; i++)
 {
     tds[i] = document.createElement("td");
     if (matrix[i] != 0) tds[i].textContent = matrix[i];
-    else tds[i].textContent = "";
+    else
+    {
+        inputs[j] = document.createElement("input");
+        inputs[j].type = "text";
+        tds[i].appendChild(inputs[j]);
+        j++;
+    }
 }
 
 for (var i = 0; i < 4; i++)
@@ -133,3 +106,11 @@ for (var i = 0; i < 4; i++)
 }
 
 articleDiv.appendChild(table);
+
+
+
+
+
+
+
+
