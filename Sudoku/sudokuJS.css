@@ -1,17 +1,14 @@
-td
-{
+td {
     width: 100px;
     height: 100px;
     text-align: center;
     font-size: 50px;
 }
-table
-{
+table {
     margin-left: 38%;
     margin-top : 12%;
 }
-input.right
-{
+input.right {
     width: 100px;
     height: 100px;
     text-align:center;
@@ -19,8 +16,7 @@ input.right
     color: blue;
     background-color: white;
 }
-input
-{
+input {
     width: 100px;
     height: 100px;
     text-align:center;
@@ -28,8 +24,7 @@ input
     color: blue;
     background-color: white;
 }
-input.wrong
-{
+input.wrong {
     width: 100px;
     height: 100px;
     text-align:center;
