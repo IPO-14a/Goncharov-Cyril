@@ -16,12 +16,31 @@
   <abstract>
     <title>Пример №1 - Перегрузка события ввода для пустой чейки поля</title>
     <para>Служит для ограничение ячейки на ввод цифр. Применяется для каждой ячейки отдельно.</para>
-    <para><code>inputs[0].oninput = function () { </code><code>var text = &quot;&quot;; </code><code>text = inputs[0].value; </code><code>if (text[text.length - 1] != 1 &amp;&amp; text[text.length - 1] != 2 &amp;&amp; text[text.length - 1] != 3 &amp;&amp; text[text.length - 1] != 4) { </code><code>inputs[0].value = text.substring(0, text.length - 1); </code><code>} </code><code>}</code></para>
+    <para><programlisting>inputs[0].oninput = function () {
+    var text = &quot;&quot;;
+    text = inputs[0].value;
+    if (text[text.length - 1] != 1 &amp;&amp; text[text.length - 1] != 2 &amp;&amp; text[text.length - 1] != 3 &amp;&amp; text[text.length - 1] != 4) {
+        inputs[0].value = text.substring(0, text.length - 1);
+    }
+}</programlisting></para>
   </abstract>
   <abstract>
     <title>Пример № 2 - Перегрузка события изменения поля для ячейки</title>
     <para>Служит для проверки
 ячейки на совпадения в строке/столбце. Применяется для каждой ячейки отдельно.</para>
-    <para><code>inputs[0].onchange = function () { </code><code>var line = Math.floor(inpinds[0] / 4); </code><code>var column = inpinds[0] % 4; </code><code>inputs[0].className = &quot;right&quot;; </code><code>for (var i = 0; i &lt; 4; i++) { </code><code>if (inputs[0].value == matrix[line * 4 + i]) { </code><code>inputs[0].className = &quot;wrong&quot;; </code><code>} </code><code>if (inputs[0].value == matrix[i * 4 + column]) { </code><code>inputs[0].classыName = &quot;wrong&quot;; </code><code>} </code><code>} </code><code>matrix[inpinds[0]] = inputs[0].value; </code><code>}</code></para>
+    <para><programlisting>inputs[0].onchange = function () {
+    var line = Math.floor(inpinds[0] / 4);
+    var column = inpinds[0] % 4;
+    inputs[0].className = &quot;right&quot;;
+    for (var i = 0; i &lt; 4; i++) {
+        if (inputs[0].value == matrix[line * 4 + i]) {
+            inputs[0].className = &quot;wrong&quot;;
+        }
+        if (inputs[0].value == matrix[i * 4 + column]) {
+            inputs[0].className = &quot;wrong&quot;;
+        }
+    }
+    matrix[inpinds[0]] = inputs[0].value;
+}</programlisting></para>
   </abstract>
 </article>

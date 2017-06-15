@@ -1,0 +1,17 @@
+.intro {
+    font - size: 10 pt;
+    font - style: italic
+}
+.heading {
+    font - size: 14 pt;
+    font - weight: bold;
+    font - family: sans - serif
+}
+.title {
+    font - size: 18 pt;
+    font - weight: bold;
+    background - color: navy;
+    color: white;
+    text - align: center;
+    font - family: sans - serif
+}
